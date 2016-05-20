@@ -1,0 +1,38 @@
+<html>
+<head>
+    <title>Microblog, Powered by Spring framework</title>
+</head>
+
+<body>
+
+{{^username}}
+<form action="/login" method="post">
+    <input type="text" name="username" placeholder="User name">
+    <button type="submit">Log In!</button>
+</form>
+{{/username}}
+
+{{#username}}
+    <form action="/add-message" method="post">
+        <input type="text" name="messageText" placeholder="New message">
+        <button type="submit">Create message</button>
+    </form>
+    {{#messages}}
+        <div style="display:inline; width:400px">
+        {{message}}
+
+        <form action="/edit-message" method="get" float="right" display="inline">
+            <input type="hidden" name="messageId" value="{{id}}">
+            <button type="submit" text-align="right">Edit</button>
+        </form>
+
+        <form action="/delete-message" method="post" float="right" display="inline">
+            <input type="hidden" name="messageId" value="{{id}}">
+            <button type="submit" text-align="right">Delete</button>
+        </form>
+        <br>
+        </div>
+    {{/messages}}
+{{/username}}
+</body>
+</html>

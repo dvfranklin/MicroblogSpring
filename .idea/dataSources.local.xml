@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="PostgreSQL - microblog@localhost" uuid="67b66bc0-9a58-4840-acf4-7033ec35f23e">
+      <secret-storage>master_key</secret-storage>
+      <schema-pattern>microblog.*</schema-pattern>
+      <default-schemas>microblog.*</default-schemas>
+    </data-source>
+  </component>
+</project>
