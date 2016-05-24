@@ -3,6 +3,7 @@ package com.theironyard;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Message {
@@ -13,11 +14,19 @@ public class Message {
 
     private String message;
 
+    @ManyToOne
+    private User author;
+
     public Message() {
     }
 
     public Message(String message) {
         this.message = message;
+    }
+
+    public Message(String message, User author) {
+        this.message = message;
+        this.author = author;
     }
 
     public Integer getId() {

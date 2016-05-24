@@ -14,16 +14,21 @@ public class MicroblogController {
     @Autowired
     MessageRepository messageRepo;
 
+    @Autowired
+    UserRepository userRepo;
+
+    //todo: add logout, add user class, add hibernate relation
+
     @RequestMapping(path = "/", method = RequestMethod.GET)
-    public String home(Model model, HttpSession session){
+    public String home(Model model, HttpSession session, String username){
 
-        Iterable<Message> messages = messageRepo.findAllByOrderByIdAsc();
+        User user = (User)session.getAttribute("user");
+
+        Iterable<Message> messages = messageRepo.findByAuthorOrderByIdAsc(user);
 
 
-        model.addAttribute("username", session.getAttribute("username"));
+        model.addAttribute("user", user);
         model.addAttribute("messages", messages);
-
-
 
         return "home";
     }
@@ -31,13 +36,28 @@ public class MicroblogController {
 
     @RequestMapping(path = "/login", method = RequestMethod.POST)
     public String login(HttpSession session, String username){
-        session.setAttribute("username", username);
+
+        User user = userRepo.findFirstByUsername(username);
+
+        session.setAttribute("user", user);
+        return "redirect:/";
+    }
+
+    @RequestMapping(path = "/signup", method = RequestMethod.GET)
+    public String signUpPage(){
+        return "signup";
+    }
+
+    @RequestMapping(path = "/signup", method = RequestMethod.POST)
+    public String signUp(String username){
+        User user = new User(username);
+        userRepo.save(user);
         return "redirect:/";
     }
 
     @RequestMapping(path = "/add-message", method = RequestMethod.POST)
-    public String addMessage(String messageText){
-        Message message = new Message(messageText);
+    public String addMessage(String messageText, HttpSession session){
+        Message message = new Message(messageText, (User)session.getAttribute("user"));
 
         messageRepo.save(message);
 
@@ -68,6 +88,12 @@ public class MicroblogController {
         m.setMessage(message);
         messageRepo.save(m);
 
+        return "redirect:/";
+    }
+
+    @RequestMapping(path = "/logout", method = RequestMethod.GET)
+    public String logout(HttpSession session){
+        session.invalidate();
         return "redirect:/";
     }
 
