@@ -1,2 +1,2 @@
-web: java -Dserver.port=$PORT $JAVA_OPTS -jar out/artifacts/.jar
+web: java -Dserver.port=$PORT $JAVA_OPTS -jar target/MicroblogSpringApplication.jar
 
