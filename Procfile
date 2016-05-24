@@ -1,2 +1,2 @@
-web: java -Dserver.port=$PORT $JAVA_OPTS -jar bin/microblogspring.jar
+web: java -Dserver.port=$PORT $JAVA_OPTS -jar target/microblogspring.jar
 
