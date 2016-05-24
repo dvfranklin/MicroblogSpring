@@ -11,8 +11,8 @@ import org.springframework.test.context.web.WebAppConfiguration;
 @WebAppConfiguration
 public class MicroblogSpringApplicationTests {
 
-/*	@Test
+	@Test
 	public void contextLoads() {
-	}*/
+	}
 
 }
