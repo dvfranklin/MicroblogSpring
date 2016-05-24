@@ -37,7 +37,7 @@ dependencies {
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
 
-task stage{
+task stage(type: Copy, dependsOn: [clean, build]) {
 	from jar.archivePath
 	into project.rootDir
 	rename {
