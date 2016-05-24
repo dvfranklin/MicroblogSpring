@@ -7,8 +7,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="67eef580-6825-476b-8468-b263fe4d1f23" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/theironyard/MicroblogController.java" afterPath="$PROJECT_DIR$/src/main/java/com/theironyard/MicroblogController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" />
     </list>
     <ignored path="MicroblogSpring.iws" />
@@ -121,7 +119,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="15">
-              <caret line="1" column="154" selection-start-line="1" selection-start-column="154" selection-end-line="1" selection-end-column="154" />
+              <caret line="1" column="164" selection-start-line="1" selection-start-column="164" selection-end-line="1" selection-end-column="164" />
               <folding />
             </state>
           </provider>
@@ -1280,7 +1278,7 @@
       <workItem from="1463752063820" duration="2186000" />
       <workItem from="1464107322027" duration="588000" />
       <workItem from="1464108802179" duration="2924000" />
-      <workItem from="1464117142811" duration="7554000" />
+      <workItem from="1464117142811" duration="7633000" />
     </task>
     <servers />
   </component>
@@ -1305,7 +1303,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31324000" />
+    <option name="totallyTimeSpent" value="31403000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="797" extended-state="6" />
@@ -1772,7 +1770,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
-          <caret line="1" column="154" selection-start-line="1" selection-start-column="154" selection-end-line="1" selection-end-column="154" />
+          <caret line="1" column="164" selection-start-line="1" selection-start-column="164" selection-end-line="1" selection-end-column="164" />
           <folding />
         </state>
       </provider>
