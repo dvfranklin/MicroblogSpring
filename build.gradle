@@ -32,7 +32,7 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-mustache')
 	compile('org.springframework.boot:spring-boot-starter-web')
 	compile "com.heroku.sdk:heroku-jdbc:0.1.1"
-	compile "org.postgresql:postgresql:9.4-1201-jdbc4"
+	runtime "org.postgresql:postgresql:9.4-1201-jdbc4"
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
 
