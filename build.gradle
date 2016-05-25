@@ -35,7 +35,7 @@ dependencies {
 	runtime "org.postgresql:postgresql:9.4-1201-jdbc4"
 }
 
-task stage {
-	dependsOn build
-}
+//task stage {
+//	dependsOn build
+//}
 
