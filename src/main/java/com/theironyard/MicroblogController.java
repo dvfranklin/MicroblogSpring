@@ -17,8 +17,6 @@ public class MicroblogController {
     @Autowired
     UserRepository userRepo;
 
-    //todo: add logout, add user class, add hibernate relation
-
     @RequestMapping(path = "/", method = RequestMethod.GET)
     public String home(Model model, HttpSession session){
 

@@ -36,22 +36,7 @@ dependencies {
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
 
-task stage(type: Copy, dependsOn: [clean, build]) {
-	from jar.archivePath
-	into project.rootDir
-	rename {
-		'app.jar'
-	}
-}
-stage.mustRunAfter(clean)
-
-clean << {
-	project.file('app.jar').delete()
+task stage {
+	dependsOn build
 }
 
-eclipse {
-	classpath {
-		 containers.remove('org.eclipse.jdt.launching.JRE_CONTAINER')
-		 containers 'org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8'
-	}
-}
